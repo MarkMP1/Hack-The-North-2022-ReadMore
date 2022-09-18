@@ -85,17 +85,19 @@ async function getText() {
             target: {tabId: tab.id},
             func: () => {
                 const docString = document.body.innerHTML;
+                console.log(docString);
                 let span = document.createElement("span");
                 span.innerHTML = docString;
-                let children = span.querySelectorAll("*");           
+                let children = span.querySelectorAll("*");       
                 var end = "";
                 // "h1, h2, h3, h4, h5, h6, p, a"
                 for(let i = 0; i < children.length; i++){
                     if((children[i].tagName != "H1" && children[i].tagName != "H2" && children[i].tagName != "H3" && children[i].tagName != "H4" && children[i].tagName != "H5" && children[i].tagName != "H6" && children[i].tagName != "P" && children[i].tagName != "A")){
                     }else{
-                        end += children[i].textCoxntent + ' ';
+                        end += children[i].textContent + ' ';
                     }
                 }
+                console.log(end);
                 return end;
             }
         })
@@ -106,7 +108,7 @@ async function getText() {
     result.then(function(resp) {
         let words = resp[0].result.trim().split(" ").length;
         let p = document.querySelector(".stats");
-        p.innerHTML = "Website stats: " +  words + " words. Approximately a "+ words/250 +  " minute read.";
+        p.innerHTML = "Website stats: " +  words + " word(s). Approximately a "+ words/250 +  " minute read.";
         p.style.opacity = 1;
     })
 }

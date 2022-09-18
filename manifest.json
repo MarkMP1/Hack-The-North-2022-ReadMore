@@ -1,7 +1,7 @@
 {
     "name": "ReadMore",
     "description": "Save time reading!",
-    "version": "0.01",
+    "version": "0.02",
     "manifest_version": 3,
     "author": "Dhyey, Mark, and Yanzi",
     "action": {
@@ -9,8 +9,7 @@
         "default_title": "ReadMore"
     },
     "host_permissions": [
-      "http://*/*",
-      "https://*/*"
+        "<all_urls>"
     ],
     "permissions": ["tabs", "activeTab", "scripting"]
 }
