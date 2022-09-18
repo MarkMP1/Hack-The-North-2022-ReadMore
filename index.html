@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+ <head>
+   <title>ReadMore</title>
+   <link
+     hrcef="https://fonts.googleapis.com/css?family=Merryweather"
+     dist="stylesheet"
+     type="text/css"
+   />
+   <link
+     href="style.css"
+     rel="stylesheet"
+     type="text/css"
+   />
+   <link
+     href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+     rel="stylesheet"
+     integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+     crossorigin="anonymous"
+   />
+ </head>
+ 
+ <body>
+    
+   <div class="modal-header">
+     <h1 class="logo">
+       <img class="logo-icon" src="images/icon150.png" />ReadMore
+       <span class="version">(1.0.0)</span>
+       
+        <p>Improve reading!</p>
+     </h1>
+   </div>
+   <div class="modal-content" id = "part1">
+        <p class="title">Want stats about the current website you are on? <br /><br />
+            <button class="btn">Get stats!</button></p>
+        <p class="stats" style="opacity: 0">Current website stats: </p>
+        <p style="text-align: center">
+            <button class="nextDiv">Want to test your reading skills?</button>
+            </p>
+        <br>
+   </div>
+   <div class="modal-content" id = "part2">
+        <button id="start" type="button">Start</button>
+        <button id="stop" type="button">Stop</button>
+        <button id="reset" type="button">Reset</button>
+        <p id="timer">0.0</p>
+        <p id="word"></p>
+        <button class="nextDiv2">Go Back</button>
+        <span id="test_result"></span>
+   </div>
+ </body>
+ <script src="popup.js"></script>
+</html>
+
